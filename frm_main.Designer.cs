@@ -1,0 +1,180 @@
+﻿namespace ManejadorInmueble
+{
+    partial class frm_main
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel1 = new Panel();
+            btn_home = new Button();
+            btn_propiedades = new Button();
+            btn_clientes = new Button();
+            btn_alquier = new Button();
+            btn_agentes = new Button();
+            mainpanel = new Panel();
+            flowLayoutPanel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.FromArgb(35, 40, 45);
+            flowLayoutPanel1.Controls.Add(panel1);
+            flowLayoutPanel1.Controls.Add(btn_home);
+            flowLayoutPanel1.Controls.Add(btn_propiedades);
+            flowLayoutPanel1.Controls.Add(btn_clientes);
+            flowLayoutPanel1.Controls.Add(btn_alquier);
+            flowLayoutPanel1.Controls.Add(btn_agentes);
+            flowLayoutPanel1.Dock = DockStyle.Left;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(228, 664);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(225, 97);
+            panel1.TabIndex = 0;
+            // 
+            // btn_home
+            // 
+            btn_home.FlatAppearance.BorderSize = 0;
+            btn_home.FlatStyle = FlatStyle.Flat;
+            btn_home.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_home.ForeColor = Color.White;
+            btn_home.Image = (Image)resources.GetObject("btn_home.Image");
+            btn_home.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_home.Location = new Point(3, 106);
+            btn_home.Name = "btn_home";
+            btn_home.Size = new Size(225, 45);
+            btn_home.TabIndex = 2;
+            btn_home.Text = "            Home";
+            btn_home.TextAlign = ContentAlignment.MiddleLeft;
+            btn_home.UseVisualStyleBackColor = true;
+            btn_home.Click += btn_home_Click_1;
+            // 
+            // btn_propiedades
+            // 
+            btn_propiedades.FlatAppearance.BorderSize = 0;
+            btn_propiedades.FlatStyle = FlatStyle.Flat;
+            btn_propiedades.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_propiedades.ForeColor = Color.White;
+            btn_propiedades.Image = (Image)resources.GetObject("btn_propiedades.Image");
+            btn_propiedades.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_propiedades.Location = new Point(3, 157);
+            btn_propiedades.Name = "btn_propiedades";
+            btn_propiedades.Size = new Size(225, 45);
+            btn_propiedades.TabIndex = 3;
+            btn_propiedades.Text = "            Propiedades";
+            btn_propiedades.TextAlign = ContentAlignment.MiddleLeft;
+            btn_propiedades.UseVisualStyleBackColor = true;
+            btn_propiedades.Click += btn_propiedades_Click;
+            // 
+            // btn_clientes
+            // 
+            btn_clientes.FlatAppearance.BorderSize = 0;
+            btn_clientes.FlatStyle = FlatStyle.Flat;
+            btn_clientes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_clientes.ForeColor = Color.White;
+            btn_clientes.Image = (Image)resources.GetObject("btn_clientes.Image");
+            btn_clientes.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_clientes.Location = new Point(3, 208);
+            btn_clientes.Name = "btn_clientes";
+            btn_clientes.Size = new Size(225, 45);
+            btn_clientes.TabIndex = 4;
+            btn_clientes.Text = "            Clientes";
+            btn_clientes.TextAlign = ContentAlignment.MiddleLeft;
+            btn_clientes.UseVisualStyleBackColor = true;
+            btn_clientes.Click += btn_clientes_Click;
+            // 
+            // btn_alquier
+            // 
+            btn_alquier.FlatAppearance.BorderSize = 0;
+            btn_alquier.FlatStyle = FlatStyle.Flat;
+            btn_alquier.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_alquier.ForeColor = Color.White;
+            btn_alquier.Image = (Image)resources.GetObject("btn_alquier.Image");
+            btn_alquier.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_alquier.Location = new Point(3, 259);
+            btn_alquier.Name = "btn_alquier";
+            btn_alquier.Size = new Size(225, 45);
+            btn_alquier.TabIndex = 5;
+            btn_alquier.Text = "            Alquileres";
+            btn_alquier.TextAlign = ContentAlignment.MiddleLeft;
+            btn_alquier.UseVisualStyleBackColor = true;
+            // 
+            // btn_agentes
+            // 
+            btn_agentes.FlatAppearance.BorderSize = 0;
+            btn_agentes.FlatStyle = FlatStyle.Flat;
+            btn_agentes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_agentes.ForeColor = Color.FromArgb(224, 224, 224);
+            btn_agentes.Image = (Image)resources.GetObject("btn_agentes.Image");
+            btn_agentes.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_agentes.Location = new Point(3, 310);
+            btn_agentes.Name = "btn_agentes";
+            btn_agentes.Size = new Size(225, 45);
+            btn_agentes.TabIndex = 6;
+            btn_agentes.Text = "            Agente";
+            btn_agentes.TextAlign = ContentAlignment.MiddleLeft;
+            btn_agentes.UseVisualStyleBackColor = true;
+            // 
+            // mainpanel
+            // 
+            mainpanel.Location = new Point(225, 3);
+            mainpanel.Name = "mainpanel";
+            mainpanel.Size = new Size(996, 661);
+            mainpanel.TabIndex = 1;
+            // 
+            // frm_main
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1219, 664);
+            Controls.Add(mainpanel);
+            Controls.Add(flowLayoutPanel1);
+            Name = "frm_main";
+            Text = "Manejador Inmuebles ";
+            flowLayoutPanel1.ResumeLayout(false);
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel1;
+        private Button btn_home;
+        private Button btn_propiedades;
+        private Button btn_clientes;
+        private Button btn_alquier;
+        private Button btn_agentes;
+        private Panel mainpanel;
+    }
+}
