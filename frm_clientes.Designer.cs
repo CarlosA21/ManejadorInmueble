@@ -1,4 +1,5 @@
-﻿namespace ManejadorInmueble
+﻿
+namespace ManejadorInmueble
 {
     partial class frm_clientes
     {
@@ -29,12 +30,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_clientes));
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            label6 = new Label();
+            txt_correo = new TextBox();
+            txt_telefono = new TextBox();
+            txt_apellido = new TextBox();
+            txt_nombre = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -42,64 +41,50 @@
             btn_borrar = new Button();
             btn_ediar = new Button();
             btn_Agregar = new Button();
-            dataGridView1 = new DataGridView();
-            btn_buscar = new Button();
-            textBox1 = new TextBox();
+            dtg_cliente = new DataGridView();
+            txt_bCliente = new TextBox();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_cedula = new TextBox();
+            label7 = new Label();
+            label8 = new Label();
+            label6 = new Label();
+            cb_tipocliente = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dtg_cliente).BeginInit();
             SuspendLayout();
             // 
-            // textBox6
+            // txt_correo
             // 
-            textBox6.Location = new Point(147, 214);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(186, 23);
-            textBox6.TabIndex = 44;
+            txt_correo.Location = new Point(169, 207);
+            txt_correo.Name = "txt_correo";
+            txt_correo.Size = new Size(186, 23);
+            txt_correo.TabIndex = 43;
             // 
-            // textBox5
+            // txt_telefono
             // 
-            textBox5.Location = new Point(173, 175);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(186, 23);
-            textBox5.TabIndex = 43;
+            txt_telefono.Location = new Point(121, 159);
+            txt_telefono.Name = "txt_telefono";
+            txt_telefono.Size = new Size(186, 23);
+            txt_telefono.TabIndex = 42;
             // 
-            // textBox4
+            // txt_apellido
             // 
-            textBox4.Location = new Point(110, 139);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(186, 23);
-            textBox4.TabIndex = 42;
+            txt_apellido.Location = new Point(121, 117);
+            txt_apellido.Name = "txt_apellido";
+            txt_apellido.Size = new Size(186, 23);
+            txt_apellido.TabIndex = 41;
             // 
-            // textBox3
+            // txt_nombre
             // 
-            textBox3.Location = new Point(110, 96);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(186, 23);
-            textBox3.TabIndex = 41;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(110, 64);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(186, 23);
-            textBox2.TabIndex = 40;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label6.Location = new Point(26, 212);
-            label6.Name = "label6";
-            label6.Size = new Size(115, 21);
-            label6.TabIndex = 39;
-            label6.Text = "Fecha Registro";
-            label6.Click += label6_Click;
+            txt_nombre.Location = new Point(121, 85);
+            txt_nombre.Name = "txt_nombre";
+            txt_nombre.Size = new Size(186, 23);
+            txt_nombre.TabIndex = 40;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label5.Location = new Point(26, 173);
+            label5.Location = new Point(12, 205);
             label5.Name = "label5";
             label5.Size = new Size(141, 21);
             label5.TabIndex = 38;
@@ -109,7 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label4.Location = new Point(34, 137);
+            label4.Location = new Point(34, 157);
             label4.Name = "label4";
             label4.Size = new Size(72, 21);
             label4.TabIndex = 37;
@@ -119,7 +104,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label3.Location = new Point(34, 94);
+            label3.Location = new Point(37, 115);
             label3.Name = "label3";
             label3.Size = new Size(71, 21);
             label3.TabIndex = 36;
@@ -130,7 +115,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label2.Location = new Point(26, 62);
+            label2.Location = new Point(37, 83);
             label2.Name = "label2";
             label2.Size = new Size(68, 21);
             label2.TabIndex = 35;
@@ -142,24 +127,26 @@
             btn_borrar.FlatStyle = FlatStyle.Flat;
             btn_borrar.Image = (Image)resources.GetObject("btn_borrar.Image");
             btn_borrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_borrar.Location = new Point(733, 184);
+            btn_borrar.Location = new Point(845, 184);
             btn_borrar.Name = "btn_borrar";
             btn_borrar.Size = new Size(159, 42);
             btn_borrar.TabIndex = 47;
-            btn_borrar.Text = "          Borrar propiedad";
+            btn_borrar.Text = "          Borrar Cliente";
             btn_borrar.UseVisualStyleBackColor = true;
+            btn_borrar.Click += btn_borrar_Click;
             // 
             // btn_ediar
             // 
             btn_ediar.FlatStyle = FlatStyle.Flat;
             btn_ediar.Image = (Image)resources.GetObject("btn_ediar.Image");
             btn_ediar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_ediar.Location = new Point(733, 125);
+            btn_ediar.Location = new Point(845, 125);
             btn_ediar.Name = "btn_ediar";
             btn_ediar.Size = new Size(159, 42);
             btn_ediar.TabIndex = 46;
-            btn_ediar.Text = "       Editar propiedad";
+            btn_ediar.Text = "       Actualizar Cliente";
             btn_ediar.UseVisualStyleBackColor = true;
+            btn_ediar.Click += btn_ediar_Click;
             // 
             // btn_Agregar
             // 
@@ -167,65 +154,110 @@
             btn_Agregar.ForeColor = SystemColors.ControlText;
             btn_Agregar.Image = (Image)resources.GetObject("btn_Agregar.Image");
             btn_Agregar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Agregar.Location = new Point(733, 62);
+            btn_Agregar.Location = new Point(845, 62);
             btn_Agregar.Name = "btn_Agregar";
             btn_Agregar.Size = new Size(159, 42);
             btn_Agregar.TabIndex = 45;
-            btn_Agregar.Text = "            Agregar propiedad";
+            btn_Agregar.Text = "            Agregar Cliente";
             btn_Agregar.UseVisualStyleBackColor = true;
+            btn_Agregar.Click += btn_Agregar_Click;
             // 
-            // dataGridView1
+            // dtg_cliente
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 300);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(972, 327);
-            dataGridView1.TabIndex = 48;
+            dtg_cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_cliente.Location = new Point(12, 322);
+            dtg_cliente.Name = "dtg_cliente";
+            dtg_cliente.Size = new Size(1078, 327);
+            dtg_cliente.TabIndex = 48;
+            dtg_cliente.CellClick += dtg_cliente_CellClick;
             // 
-            // btn_buscar
+            // txt_bCliente
             // 
-            btn_buscar.Location = new Point(592, 276);
-            btn_buscar.Name = "btn_buscar";
-            btn_buscar.Size = new Size(127, 23);
-            btn_buscar.TabIndex = 51;
-            btn_buscar.Text = "Buscar";
-            btn_buscar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(424, 276);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(162, 23);
-            textBox1.TabIndex = 50;
+            txt_bCliente.Location = new Point(462, 286);
+            txt_bCliente.Name = "txt_bCliente";
+            txt_bCliente.Size = new Size(162, 23);
+            txt_bCliente.TabIndex = 50;
+            txt_bCliente.TextChanged += txt_bCliente_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(301, 276);
+            label1.Location = new Point(339, 288);
             label1.Name = "label1";
             label1.Size = new Size(117, 21);
             label1.TabIndex = 49;
             label1.Text = "Buscar Cliente:";
             // 
+            // txt_cedula
+            // 
+            txt_cedula.Location = new Point(121, 47);
+            txt_cedula.Name = "txt_cedula";
+            txt_cedula.Size = new Size(186, 23);
+            txt_cedula.TabIndex = 53;
+            txt_cedula.TextChanged += textBox7_TextChanged;
+            txt_cedula.KeyPress += txt_cedula_KeyPress;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label7.Location = new Point(37, 47);
+            label7.Name = "label7";
+            label7.Size = new Size(60, 21);
+            label7.TabIndex = 52;
+            label7.Text = "Cedula";
+            label7.Click += label7_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(437, 9);
+            label8.Name = "label8";
+            label8.Size = new Size(103, 32);
+            label8.TabIndex = 54;
+            label8.Text = "Clientes";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label6.Location = new Point(407, 62);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 21);
+            label6.TabIndex = 55;
+            label6.Text = "Tipo de cliente";
+            // 
+            // cb_tipocliente
+            // 
+            cb_tipocliente.FormattingEnabled = true;
+            cb_tipocliente.Items.AddRange(new object[] { "Propietario", "Inquilino" });
+            cb_tipocliente.Location = new Point(528, 64);
+            cb_tipocliente.Name = "cb_tipocliente";
+            cb_tipocliente.Size = new Size(121, 23);
+            cb_tipocliente.TabIndex = 56;
+            // 
             // frm_clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(996, 661);
-            Controls.Add(btn_buscar);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1102, 671);
+            Controls.Add(cb_tipocliente);
+            Controls.Add(label6);
+            Controls.Add(label8);
+            Controls.Add(txt_cedula);
+            Controls.Add(label7);
+            Controls.Add(txt_bCliente);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dtg_cliente);
             Controls.Add(btn_borrar);
             Controls.Add(btn_ediar);
             Controls.Add(btn_Agregar);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(label6);
+            Controls.Add(txt_correo);
+            Controls.Add(txt_telefono);
+            Controls.Add(txt_apellido);
+            Controls.Add(txt_nombre);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -233,19 +265,22 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frm_clientes";
             Text = "frm_clientes";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frm_clientes_Load;
+            ((System.ComponentModel.ISupportInitialize)dtg_cliente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        #endregion
+        private void label7_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Label label6;
+#endregion
+        private TextBox txt_correo;
+        private TextBox txt_telefono;
+        private TextBox txt_apellido;
+        private TextBox txt_nombre;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -253,9 +288,14 @@
         private Button btn_borrar;
         private Button btn_ediar;
         private Button btn_Agregar;
-        private DataGridView dataGridView1;
+        private DataGridView dtg_cliente;
         private Button btn_buscar;
-        private TextBox textBox1;
+        private TextBox txt_bCliente;
         private Label label1;
+        private TextBox txt_cedula;
+        private Label label7;
+        private Label label8;
+        private Label label6;
+        private ComboBox cb_tipocliente;
     }
 }

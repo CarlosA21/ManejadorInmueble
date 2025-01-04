@@ -37,7 +37,12 @@
             btn_alquier = new Button();
             btn_agentes = new Button();
             mainpanel = new Panel();
+            panel2 = new Panel();
+            lbl_usuario = new Label();
+            label1 = new Label();
+            lbl_minimizar = new Label();
             flowLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -52,7 +57,7 @@
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(228, 664);
+            flowLayoutPanel1.Size = new Size(228, 716);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -128,6 +133,7 @@
             btn_alquier.Text = "            Alquileres";
             btn_alquier.TextAlign = ContentAlignment.MiddleLeft;
             btn_alquier.UseVisualStyleBackColor = true;
+            btn_alquier.Click += btn_alquier_Click;
             // 
             // btn_agentes
             // 
@@ -147,22 +153,74 @@
             // 
             // mainpanel
             // 
-            mainpanel.Location = new Point(225, 3);
+            mainpanel.Location = new Point(226, 33);
             mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(996, 661);
+            mainpanel.Size = new Size(1102, 671);
             mainpanel.TabIndex = 1;
+            mainpanel.Paint += mainpanel_Paint;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(35, 40, 45);
+            panel2.Controls.Add(lbl_minimizar);
+            panel2.Controls.Add(lbl_usuario);
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(226, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1102, 34);
+            panel2.TabIndex = 0;
+            // 
+            // lbl_usuario
+            // 
+            lbl_usuario.AutoSize = true;
+            lbl_usuario.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_usuario.ForeColor = Color.White;
+            lbl_usuario.Location = new Point(8, 9);
+            lbl_usuario.Name = "lbl_usuario";
+            lbl_usuario.Size = new Size(27, 25);
+            lbl_usuario.TabIndex = 2;
+            lbl_usuario.Text = "   ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.IndianRed;
+            label1.Location = new Point(1072, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(27, 30);
+            label1.TabIndex = 0;
+            label1.Text = "X";
+            label1.Click += label1_Click;
+            // 
+            // lbl_minimizar
+            // 
+            lbl_minimizar.AutoSize = true;
+            lbl_minimizar.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_minimizar.ForeColor = Color.Transparent;
+            lbl_minimizar.Location = new Point(1033, -7);
+            lbl_minimizar.Name = "lbl_minimizar";
+            lbl_minimizar.Size = new Size(33, 45);
+            lbl_minimizar.TabIndex = 3;
+            lbl_minimizar.Text = "-";
+            lbl_minimizar.Click += lbl_minimizar_Click;
             // 
             // frm_main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1219, 664);
+            ClientSize = new Size(1329, 716);
+            Controls.Add(panel2);
             Controls.Add(mainpanel);
             Controls.Add(flowLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frm_main";
             Text = "Manejador Inmuebles ";
+            Load += frm_main_Load;
             flowLayoutPanel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -176,5 +234,9 @@
         private Button btn_alquier;
         private Button btn_agentes;
         private Panel mainpanel;
+        private Panel panel2;
+        private Label label1;
+        private Label lbl_usuario;
+        private Label lbl_minimizar;
     }
 }

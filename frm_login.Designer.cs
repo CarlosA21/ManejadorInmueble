@@ -28,50 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
             label1 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txt_user = new TextBox();
+            txt_pass = new TextBox();
             btn_acceder = new Button();
             label2 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(136, 30);
+            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(77, 9);
             label1.Name = "label1";
-            label1.Size = new Size(117, 15);
+            label1.Size = new Size(251, 32);
             label1.TabIndex = 0;
-            label1.Text = "Manejador Inmueble";
+            label1.Text = "Manejador Inmuebles";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(151, 146);
+            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(140, 155);
             label3.Name = "label3";
-            label3.Size = new Size(67, 15);
+            label3.Size = new Size(109, 25);
             label3.TabIndex = 2;
             label3.Text = "Contraseña";
             label3.Click += label3_Click;
             // 
-            // textBox1
+            // txt_user
             // 
-            textBox1.Location = new Point(116, 120);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 23);
-            textBox1.TabIndex = 3;
+            txt_user.Location = new Point(116, 120);
+            txt_user.Name = "txt_user";
+            txt_user.Size = new Size(158, 23);
+            txt_user.TabIndex = 3;
             // 
-            // textBox2
+            // txt_pass
             // 
-            textBox2.Location = new Point(116, 173);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(158, 23);
-            textBox2.TabIndex = 4;
+            txt_pass.Location = new Point(116, 183);
+            txt_pass.Name = "txt_pass";
+            txt_pass.Size = new Size(158, 23);
+            txt_pass.TabIndex = 4;
             // 
             // btn_acceder
             // 
-            btn_acceder.Location = new Point(136, 248);
+            btn_acceder.Location = new Point(140, 248);
             btn_acceder.Name = "btn_acceder";
             btn_acceder.Size = new Size(97, 23);
             btn_acceder.TabIndex = 5;
@@ -82,11 +86,21 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Image = (Image)resources.GetObject("label2.Image");
             label2.Location = new Point(162, 86);
             label2.Name = "label2";
-            label2.Size = new Size(56, 15);
+            label2.Size = new Size(0, 15);
             label2.TabIndex = 1;
-            label2.Text = "USUARIO";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(140, 92);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 25);
+            label4.TabIndex = 6;
+            label4.Text = "USUARIO";
             // 
             // frm_login
             // 
@@ -94,9 +108,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(410, 381);
+            Controls.Add(label4);
             Controls.Add(btn_acceder);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txt_pass);
+            Controls.Add(txt_user);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -111,9 +126,10 @@
 
         private Label label1;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txt_user;
+        private TextBox txt_pass;
         private Button btn_acceder;
         private Label label2;
+        private Label label4;
     }
 }

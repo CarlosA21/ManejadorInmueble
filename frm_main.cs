@@ -12,9 +12,13 @@ namespace ManejadorInmueble
 {
     public partial class frm_main : Form
     {
-        public frm_main()
+
+
+        public frm_main(string usuario)
         {
             InitializeComponent();
+            lbl_usuario.Text = "Bienvenido, " + usuario;
+
         }
         public void loadform(object Form)
         {
@@ -46,6 +50,32 @@ namespace ManejadorInmueble
         private void btn_clientes_Click(object sender, EventArgs e)
         {
             loadform(new frm_clientes());
+        }
+
+        private void btn_alquier_Click(object sender, EventArgs e)
+        {
+            loadform(new frm_alquiler());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

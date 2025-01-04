@@ -1,4 +1,5 @@
-﻿namespace ManejadorInmueble
+﻿
+namespace ManejadorInmueble
 {
     partial class frm_propiedades
     {
@@ -30,35 +31,38 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_propiedades));
             btn_Agregar = new Button();
-            btn_ediar = new Button();
+            btn_editar = new Button();
             btn_borrar = new Button();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            btn_buscar = new Button();
+            dtg_propiedades = new DataGridView();
+            txt_buscar = new TextBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            comboBox1 = new ComboBox();
+            cb_estadoP = new ComboBox();
             label10 = new Label();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            cb_tipoPropiedad = new ComboBox();
+            cb_bath = new ComboBox();
+            cb_habitaciones = new ComboBox();
+            txt_size = new TextBox();
+            txt_precio = new TextBox();
+            txt_estado = new TextBox();
+            txt_ciudad = new TextBox();
+            txt_direccion = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label11 = new Label();
-            textBox7 = new TextBox();
-            button2 = new Button();
+            txt_propietario = new TextBox();
+            btn_search = new Button();
             label12 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_descripcion = new TextBox();
+            label13 = new Label();
+            txt_id = new TextBox();
+            label15 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dtg_propiedades).BeginInit();
             SuspendLayout();
             // 
             // btn_Agregar
@@ -67,7 +71,7 @@
             btn_Agregar.ForeColor = SystemColors.ControlText;
             btn_Agregar.Image = (Image)resources.GetObject("btn_Agregar.Image");
             btn_Agregar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Agregar.Location = new Point(744, 46);
+            btn_Agregar.Location = new Point(888, 57);
             btn_Agregar.Name = "btn_Agregar";
             btn_Agregar.Size = new Size(159, 42);
             btn_Agregar.TabIndex = 0;
@@ -75,24 +79,25 @@
             btn_Agregar.UseVisualStyleBackColor = true;
             btn_Agregar.Click += button1_Click;
             // 
-            // btn_ediar
+            // btn_editar
             // 
-            btn_ediar.FlatStyle = FlatStyle.Flat;
-            btn_ediar.Image = (Image)resources.GetObject("btn_ediar.Image");
-            btn_ediar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_ediar.Location = new Point(744, 109);
-            btn_ediar.Name = "btn_ediar";
-            btn_ediar.Size = new Size(159, 42);
-            btn_ediar.TabIndex = 1;
-            btn_ediar.Text = "       Editar propiedad";
-            btn_ediar.UseVisualStyleBackColor = true;
+            btn_editar.FlatStyle = FlatStyle.Flat;
+            btn_editar.Image = (Image)resources.GetObject("btn_editar.Image");
+            btn_editar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_editar.Location = new Point(888, 132);
+            btn_editar.Name = "btn_editar";
+            btn_editar.Size = new Size(159, 42);
+            btn_editar.TabIndex = 1;
+            btn_editar.Text = "       Editar propiedad";
+            btn_editar.UseVisualStyleBackColor = true;
+            btn_editar.Click += btn_editar_Click;
             // 
             // btn_borrar
             // 
             btn_borrar.FlatStyle = FlatStyle.Flat;
             btn_borrar.Image = (Image)resources.GetObject("btn_borrar.Image");
             btn_borrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_borrar.Location = new Point(744, 168);
+            btn_borrar.Location = new Point(888, 198);
             btn_borrar.Name = "btn_borrar";
             btn_borrar.Size = new Size(159, 42);
             btn_borrar.TabIndex = 2;
@@ -104,42 +109,34 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(497, 273);
+            label1.Location = new Point(94, 332);
             label1.Name = "label1";
             label1.Size = new Size(140, 21);
             label1.TabIndex = 3;
             label1.Text = "Buscar Propiedad:";
-            label1.Click += label1_Click;
             // 
-            // dataGridView1
+            // dtg_propiedades
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 309);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(972, 327);
-            dataGridView1.TabIndex = 4;
+            dtg_propiedades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_propiedades.Location = new Point(12, 371);
+            dtg_propiedades.Name = "dtg_propiedades";
+            dtg_propiedades.Size = new Size(1078, 265);
+            dtg_propiedades.TabIndex = 4;
+            dtg_propiedades.CellClick += dtg_propiedades_CellClick;
             // 
-            // textBox1
+            // txt_buscar
             // 
-            textBox1.Location = new Point(643, 271);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(162, 23);
-            textBox1.TabIndex = 5;
-            // 
-            // btn_buscar
-            // 
-            btn_buscar.Location = new Point(811, 271);
-            btn_buscar.Name = "btn_buscar";
-            btn_buscar.Size = new Size(127, 23);
-            btn_buscar.TabIndex = 6;
-            btn_buscar.Text = "Buscar";
-            btn_buscar.UseVisualStyleBackColor = true;
+            txt_buscar.Location = new Point(240, 330);
+            txt_buscar.Name = "txt_buscar";
+            txt_buscar.Size = new Size(162, 23);
+            txt_buscar.TabIndex = 5;
+            txt_buscar.TextChanged += txt_buscar_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label7.Location = new Point(26, 46);
+            label7.Location = new Point(64, 78);
             label7.Name = "label7";
             label7.Size = new Size(105, 21);
             label7.TabIndex = 12;
@@ -149,7 +146,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label8.Location = new Point(26, 85);
+            label8.Location = new Point(64, 117);
             label8.Name = "label8";
             label8.Size = new Size(54, 21);
             label8.TabIndex = 13;
@@ -159,97 +156,99 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label9.Location = new Point(26, 121);
+            label9.Location = new Point(64, 153);
             label9.Name = "label9";
             label9.Size = new Size(143, 21);
             label9.TabIndex = 14;
             label9.Text = "Estado propiedad: ";
-            label9.Click += label9_Click;
             // 
-            // comboBox1
+            // cb_estadoP
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(165, 119);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 20;
+            cb_estadoP.FormattingEnabled = true;
+            cb_estadoP.Items.AddRange(new object[] { "Venta", "Alquiler" });
+            cb_estadoP.Location = new Point(203, 151);
+            cb_estadoP.Name = "cb_estadoP";
+            cb_estadoP.Size = new Size(121, 23);
+            cb_estadoP.TabIndex = 20;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label10.Location = new Point(26, 170);
+            label10.Location = new Point(64, 202);
             label10.Name = "label10";
             label10.Size = new Size(140, 21);
             label10.TabIndex = 21;
             label10.Text = "Tipo de propiedad";
             // 
-            // comboBox2
+            // cb_tipoPropiedad
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(165, 172);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 22;
+            cb_tipoPropiedad.FormattingEnabled = true;
+            cb_tipoPropiedad.Items.AddRange(new object[] { "Casa", "Apartamento", "Solar", "Local" });
+            cb_tipoPropiedad.Location = new Point(203, 204);
+            cb_tipoPropiedad.Name = "cb_tipoPropiedad";
+            cb_tipoPropiedad.Size = new Size(121, 23);
+            cb_tipoPropiedad.TabIndex = 22;
             // 
-            // comboBox3
+            // cb_bath
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox3.Location = new Point(137, 85);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(80, 23);
-            comboBox3.TabIndex = 23;
+            cb_bath.FormattingEnabled = true;
+            cb_bath.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            cb_bath.Location = new Point(175, 117);
+            cb_bath.Name = "cb_bath";
+            cb_bath.Size = new Size(80, 23);
+            cb_bath.TabIndex = 23;
             // 
-            // comboBox4
+            // cb_habitaciones
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox4.Location = new Point(137, 48);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(80, 23);
-            comboBox4.TabIndex = 24;
+            cb_habitaciones.FormattingEnabled = true;
+            cb_habitaciones.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            cb_habitaciones.Location = new Point(175, 80);
+            cb_habitaciones.Name = "cb_habitaciones";
+            cb_habitaciones.Size = new Size(80, 23);
+            cb_habitaciones.TabIndex = 24;
             // 
-            // textBox6
+            // txt_size
             // 
-            textBox6.Location = new Point(448, 207);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(186, 23);
-            textBox6.TabIndex = 34;
+            txt_size.Location = new Point(545, 209);
+            txt_size.Name = "txt_size";
+            txt_size.Size = new Size(186, 23);
+            txt_size.TabIndex = 34;
             // 
-            // textBox5
+            // txt_precio
             // 
-            textBox5.Location = new Point(448, 168);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(186, 23);
-            textBox5.TabIndex = 33;
+            txt_precio.Location = new Point(545, 170);
+            txt_precio.Name = "txt_precio";
+            txt_precio.Size = new Size(186, 23);
+            txt_precio.TabIndex = 33;
             // 
-            // textBox4
+            // txt_estado
             // 
-            textBox4.Location = new Point(448, 132);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(186, 23);
-            textBox4.TabIndex = 32;
+            txt_estado.Location = new Point(545, 134);
+            txt_estado.Name = "txt_estado";
+            txt_estado.Size = new Size(186, 23);
+            txt_estado.TabIndex = 32;
+            txt_estado.TextChanged += txt_estado_TextChanged;
             // 
-            // textBox3
+            // txt_ciudad
             // 
-            textBox3.Location = new Point(448, 89);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(186, 23);
-            textBox3.TabIndex = 31;
+            txt_ciudad.Location = new Point(545, 91);
+            txt_ciudad.Name = "txt_ciudad";
+            txt_ciudad.Size = new Size(186, 23);
+            txt_ciudad.TabIndex = 31;
             // 
-            // textBox2
+            // txt_direccion
             // 
-            textBox2.Location = new Point(448, 57);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(186, 23);
-            textBox2.TabIndex = 30;
+            txt_direccion.Location = new Point(545, 52);
+            txt_direccion.Name = "txt_direccion";
+            txt_direccion.Size = new Size(186, 23);
+            txt_direccion.TabIndex = 30;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label6.Location = new Point(364, 202);
+            label6.Location = new Point(461, 204);
             label6.Name = "label6";
             label6.Size = new Size(69, 21);
             label6.TabIndex = 29;
@@ -259,7 +258,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label5.Location = new Point(372, 166);
+            label5.Location = new Point(469, 168);
             label5.Name = "label5";
             label5.Size = new Size(55, 21);
             label5.TabIndex = 28;
@@ -269,7 +268,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label4.Location = new Point(372, 130);
+            label4.Location = new Point(469, 132);
             label4.Name = "label4";
             label4.Size = new Size(58, 21);
             label4.TabIndex = 27;
@@ -279,7 +278,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label3.Location = new Point(372, 87);
+            label3.Location = new Point(469, 89);
             label3.Name = "label3";
             label3.Size = new Size(61, 21);
             label3.TabIndex = 26;
@@ -289,7 +288,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label2.Location = new Point(364, 55);
+            label2.Location = new Point(461, 50);
             label2.Name = "label2";
             label2.Size = new Size(78, 21);
             label2.TabIndex = 25;
@@ -299,112 +298,156 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label11.Location = new Point(26, 225);
+            label11.Location = new Point(64, 257);
             label11.Name = "label11";
             label11.Size = new Size(92, 21);
             label11.TabIndex = 35;
             label11.Text = "Propietario";
             // 
-            // textBox7
+            // txt_propietario
             // 
-            textBox7.Location = new Point(124, 227);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(110, 23);
-            textBox7.TabIndex = 36;
+            txt_propietario.Location = new Point(162, 259);
+            txt_propietario.Name = "txt_propietario";
+            txt_propietario.Size = new Size(110, 23);
+            txt_propietario.TabIndex = 36;
             // 
-            // button2
+            // btn_search
             // 
-            button2.Location = new Point(240, 222);
-            button2.Name = "button2";
-            button2.Size = new Size(121, 31);
-            button2.TabIndex = 37;
-            button2.Text = "Buscar propietario";
-            button2.UseVisualStyleBackColor = true;
+            btn_search.Location = new Point(278, 254);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(121, 31);
+            btn_search.TabIndex = 37;
+            btn_search.Text = "Buscar propietario";
+            btn_search.UseVisualStyleBackColor = true;
+            btn_search.Click += btn_search_Click;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label12.Location = new Point(324, 8);
+            label12.Location = new Point(408, 9);
             label12.Name = "label12";
             label12.Size = new Size(174, 37);
             label12.TabIndex = 38;
             label12.Text = "Propiedades";
-            label12.Click += label12_Click;
+            // 
+            // txt_descripcion
+            // 
+            txt_descripcion.Location = new Point(569, 249);
+            txt_descripcion.Multiline = true;
+            txt_descripcion.Name = "txt_descripcion";
+            txt_descripcion.Size = new Size(162, 89);
+            txt_descripcion.TabIndex = 39;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label13.Location = new Point(461, 247);
+            label13.Name = "label13";
+            label13.Size = new Size(94, 21);
+            label13.TabIndex = 40;
+            label13.Text = "Descripcion";
+            // 
+            // txt_id
+            // 
+            txt_id.Enabled = false;
+            txt_id.Location = new Point(175, 52);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(176, 23);
+            txt_id.TabIndex = 44;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            label15.Location = new Point(64, 50);
+            label15.Name = "label15";
+            label15.Size = new Size(105, 21);
+            label15.TabIndex = 43;
+            label15.Text = "ID Propiedad";
             // 
             // frm_propiedades
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(996, 661);
+            ClientSize = new Size(1102, 671);
+            Controls.Add(txt_id);
+            Controls.Add(label15);
+            Controls.Add(label13);
+            Controls.Add(txt_descripcion);
             Controls.Add(label12);
-            Controls.Add(button2);
-            Controls.Add(textBox7);
+            Controls.Add(btn_search);
+            Controls.Add(txt_propietario);
             Controls.Add(label11);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(txt_size);
+            Controls.Add(txt_precio);
+            Controls.Add(txt_estado);
+            Controls.Add(txt_ciudad);
+            Controls.Add(txt_direccion);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
+            Controls.Add(cb_habitaciones);
+            Controls.Add(cb_bath);
+            Controls.Add(cb_tipoPropiedad);
             Controls.Add(label10);
-            Controls.Add(comboBox1);
+            Controls.Add(cb_estadoP);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(btn_buscar);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(txt_buscar);
+            Controls.Add(dtg_propiedades);
             Controls.Add(label1);
             Controls.Add(btn_borrar);
-            Controls.Add(btn_ediar);
+            Controls.Add(btn_editar);
             Controls.Add(btn_Agregar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frm_propiedades";
             Text = "frm_propiedades";
             Load += frm_propiedades_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtg_propiedades).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
+
+
         #endregion
 
         private Button btn_Agregar;
-        private Button btn_ediar;
+        private Button btn_editar;
         private Button btn_borrar;
         private Label label1;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private Button btn_buscar;
+        private DataGridView dtg_propiedades;
+        private TextBox txt_buscar;
         private Label label7;
         private Label label8;
         private Label label9;
-        private ComboBox comboBox1;
+        private ComboBox cb_estadoP;
         private Label label10;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private ComboBox cb_tipoPropiedad;
+        private ComboBox cb_bath;
+        private ComboBox cb_habitaciones;
+        private TextBox txt_size;
+        private TextBox txt_precio;
+        private TextBox txt_estado;
+        private TextBox txt_ciudad;
+        private TextBox txt_direccion;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label11;
-        private TextBox textBox7;
-        private Button button2;
+        private TextBox txt_propietario;
+        private Button btn_search;
         private Label label12;
+        private TextBox txt_descripcion;
+        private Label label13;
+        private TextBox txt_id;
+        private Label label15;
     }
 }
